@@ -14,9 +14,12 @@ import swip7 from "../assets/images/swip7.jpg";
 
 const Love = () => {
     return (
-        <div className='max-w-[1440px] mx-auto ' >
+
+        <div className='max-w-[1600px] mx-auto ' >
+        
+      
             <Swiper
-                slidesPerView={3}
+                slidesPerView={4}
                 spaceBetween={30}
                 pagination={{
                   clickable: true,
@@ -43,11 +46,11 @@ const Love = () => {
                     spaceBetween: 20,
                   },
                   1024: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                     spaceBetween: 40,
                   },
                   2066: {
-                    slidesPerView: 3,
+                    slidesPerView: 4,
                     spaceBetween: 40,
                   },
                 }}
@@ -55,7 +58,7 @@ const Love = () => {
                   delay: 2500,
                   disableOnInteraction: false,
                 }}
-                modules={[Pagination, Autoplay]}
+                modules={[ Autoplay]}
                 className="mt-8"
               >
                 <SwiperSlide>

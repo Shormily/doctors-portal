@@ -1,36 +1,143 @@
-import React from 'react';
+import React from "react";
+import logos from "../assets/images/logos.png";
+import { FiFacebook } from "react-icons/fi";
+import { Input } from "antd";
+import "./Footer.css";
 
 const Footer = () => {
-    return (
-        <>
-          <footer className="footer p-10 bg-gray-800 text-white h-100% text-base-content mt-5">
-  <div>
-    {/* <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" className="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg> */}
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
-  </div> 
-  <div>
-    <span className="footer-title">Services</span> 
-    <a className="link link-hover">Branding</a> 
-    <a className="link link-hover">Design</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
-  </div> 
-  <div>
-    <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
-  </div> 
-  <div>
-    <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
-  </div>
-</footer>
-        </>
-    );
+  return (
+    <>
+      <div className="bg-[#f1f5f9]  pb-8 ">
+        <div className="bg-[#f1f5f9]   flex  justify-center items-center text-slate-950 font-semibold ">
+          <img className="pt-6 w-48 mb-2  " src={logos} alt="" />
+        </div>
+        <div className="max-w-[1040px] m-auto pb-4 ">
+          <div
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "#d4d4d4",
+              height: "1px",
+              marginBottom: "30px",
+            }}
+          />
+        </div>
+
+        <div className="pb-8 grid lg:grid-cols-4  p-3 gap-4 flex justify-center items-center  max-w-[1030px] m-auto w-full">
+          <div>
+            <h1 className="font-light text-[23px] pb-8">Contact us</h1>
+            <div className="flex">
+              <i class="fa-solid fa-phone icn bg-[#a3a3a3]"></i>
+              <p className="font-light font-semibold ">
+                Call us
+                <p className="font-light text-[12px] font-normal">
+                  0-800-777-2331
+                </p>
+              </p>
+            </div>
+            <div className="flex">
+              <i class="fa-solid fa-location icn bg-[#06b6d4]"></i>
+              <p className="font-light  font-semibold  ">
+                Visit us anytime
+                <p className="font-light text-[12px] font-normal ">
+                  27th Avenue, W2 3XE, New York
+                </p>
+              </p>
+            </div>
+            <div className="flex">
+              <i class="fa-solid fa-envelope icn bg-[#1e3a8a] text-white"></i>
+              <p className="font-light font-semibold ">
+                Send us an email
+                <p className="font-light text-[12px] font-normal ">
+                  office@medicare.com
+                </p>
+              </p>
+            </div>
+          </div>
+          <div>
+            <h1 className="font-light text-[23px] mb-8 ">About US</h1>
+            <p className="font-light text-[12px] font-medium mb-1">About us</p>
+            <p className="font-light text-[12px] font-medium mb-1">
+              Our Services
+            </p>
+            <p className="font-light text-[12px] font-medium mb-1">
+              Appointment
+            </p>
+            <p className="font-light text-[12px] font-medium mb-1">Location</p>
+            <p className="font-light text-[12px] font-medium mb-1">Blog</p>
+            <p className="font-light text-[12px] font-medium mb-1">Shop</p>
+          </div>
+          <div>
+            <h1 className="font-light text-[23px] mt-1 ">Subscribe</h1>
+            <p className=" my-3 font-light text-[12px] font-normal mt-5   ">
+              Sign up for Medicare newsletter to receive all the news offers and
+              discounts from Medicare eye clinic.
+            </p>
+            <Input
+              placeholder="Type in your email address"
+              className=" p-2 w-full rounded-none  max-w-xs mb-3 "
+            />
+            <br />
+            <button className="bg-[#1e3a8a] hover:bg-[#1e40af] border-none text-white btn-sm    border border-blue-700 rounded-[3px]">
+              Subscribe
+            </button>
+          </div>
+          <div>
+            <h1 className="font-light text-[23px] font mb-[34px]">
+              Social Network
+            </h1>
+            <div className="flex">
+              <i className="fa-brands fa-facebook-f icn bg-[#a3a3a3]"></i>
+              <p className="font-semibold ">
+                Facebook
+                <p className="font-light text-[12px] font-normal">
+                  www.facebook.com/medicare
+                </p>
+              </p>
+              <br />
+            </div>
+            <div className="flex">
+              {" "}
+              <i class="fa-brands fa-twitter icn  bg-[#06b6d4]"></i>
+              <p className="font-semibold ">
+                Twitter
+                <p className="font-light text-[12px] font-normal">#WeCare</p>
+              </p>
+            </div>
+            <div className="flex">
+              {" "}
+              <i className="fa-brands fa-instagram icn bg-[#1e3a8a]"></i>
+              <p className="font-semibold ">
+                Instagram
+                <p className="font-light text-[12px] font-normal">
+                  www.instagram.com/medicare
+                </p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-full text-white mx-w-[1440px] flex justify-center items-center  min-h-[60px] mb-24 flex  shadow-lg gap-64  goglefont   absolute z-20 text-slate-950 font-semibold footer ">
+        <p className="font-light text-[12px] font-normal">
+          Copyright by shormily 2018. All rights reserved.
+        </p>
+        <ul className="hidden sm:flex px-4 p-4 mt-1 max-w-[1140] flex justify-center items-center font-normal">
+          <li className="mx-4">Location</li>
+          <li className="mr-4">Contact us</li>
+
+          <li className="mr-4">Our Service</li>
+          <li className="mr-4">
+            Back To Page Top{" "}
+            <i className="fa-sharp fa-solid fa-angles-up mx-1"></i>
+          </li>
+
+          {/* <li  className="mr-4">
+            <NavLink as={NavLink}  to="/contact">Contact</NavLink>
+          </li> */}
+        </ul>
+      </div>
+    </>
+  );
 };
 
 export default Footer;

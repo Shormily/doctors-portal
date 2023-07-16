@@ -9,13 +9,16 @@ import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import useAdmin from "../hook/useAdmin";
+import   "./Dashboard.css";
+// import RightSide from "../RightSide/RightSide";
+// import MyAppointment from "../MyAppointment/MyAppointment";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
   const [isAdmin] = useAdmin(user?.email);
 
   const menus = [
-    { name: "dashboard", link: "/dashboard", icon: MdOutlineDashboard },
+    { name: "Dashboard", link: "/dashboard", icon: MdOutlineDashboard },
     { name: "Home", link: "/", icon: AiOutlineUser },
     { name: "messages", icon: FiMessageSquare },
     { name: "analytics", icon: TbReportAnalytics, margin: true },
@@ -28,11 +31,13 @@ const Dashboard = () => {
   const [open, setOpen] = useState(true);
   return (
     <>
-      <section className="flex gap-6 sidebar h-full">
+     <div className="app  ">
+        <div className="appGlass">
+        <section className="flex gap-6 sidebar  h-full mr-20">
         <div
-          className={`bg-[#0e0e0e] min-h-screen ${
+          className={` megacolor min-h-screen ${
             open ? "w-72" : "w-16"
-          } duration-500 text-gray-100 px-5`}
+          } duration-500 text-gray-900 px-5`}
         >
           <div className="py-3 flex justify-end ">
             <HiMenuAlt3
@@ -49,7 +54,7 @@ const Dashboard = () => {
                 key={i}
                 className={` ${
                   menu?.margin && "mt-5"
-                } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
+                } group flex items-center text-sm  gap-3.5 font-semibold p-2 hover:bg-indigo-400 rounded-md`}
               >
                 <div>{React.createElement(menu?.icon, { size: "20" })}</div>
                 <h2
@@ -76,19 +81,19 @@ const Dashboard = () => {
               <>
                 <Link
                   to="/dashboard/allusers"
-                  className="flex items-center gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md "
+                  className="flex items-center gap-3.5 font-medium p-2 hover:bg-indigo-400 rounded-md "
                 >
                   <FiFolder /> AllUsers
                 </Link>
                 <Link
                   to="/dashboard/addoctors"
-                  className="flex items-center gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md "
+                  className="flex items-center gap-3.5 font-medium p-2 hover:bg-indigo-400 rounded-md "
                 >
                   <FiFolder /> AddDoctors
                 </Link>
                 <Link
                   to="/dashboard/managedoctors"
-                  className="flex items-center gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md "
+                  className="flex items-center gap-3.5 font-medium p-2 hover:bg-indigo-400 rounded-md "
                 >
                   <FiFolder /> ManageDoctors
                 </Link>
@@ -106,23 +111,13 @@ const Dashboard = () => {
           <Outlet></Outlet>
         </div>
       </section>
+      {/* <MyAppointment/>
+          <RightSide /> */}
+        </div>
+      </div>
+  
 
-      {/* <div className=Name"drawer drawer-mobile">
-  <input id="my-drawer-2" type="checkbox" className=Name"drawer-toggle" />
-  <div className=Name"drawer-content flex flex-col items-center justify-center">
-    <Outlet></Outlet>
-    <label for="my-drawer-2" className=Name"btn btn-primary drawer-button lg:hidden">Open drawer</label>
-  
-  </div> 
-  <div className=Name"drawer-side">
-    <label for="my-drawer-2" className=Name"drawer-overlay"></label> 
-    <ul className=Name"menu p-4 w-80 bg-base-100 text-base-content">
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
-    </ul>
-  
-  </div>
-</div> */}
+     
     </>
   );
 };

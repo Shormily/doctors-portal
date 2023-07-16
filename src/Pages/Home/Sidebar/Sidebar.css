@@ -7,7 +7,9 @@
   }
   
   /* Tablets */
- 
+  .sides{
+    background: linear-gradient(to right, rgba(130,190,66,1) 0%,rgba(48,178,210,1) 50%,rgba(28,76,147,1) 100%);
+}
   
   @media screen and (max-width: 768px) {
     .sidebar{

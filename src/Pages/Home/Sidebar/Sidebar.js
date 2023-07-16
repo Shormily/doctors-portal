@@ -22,7 +22,7 @@ const Sidebar = () => {
   const [open, setOpen] = useState(true);
   return (
     <>
-      <section className="flex gap-6 sidebar h-full">
+      <section className="flex gap-6 sidebar  h-full ">
       <div
         className={`bg-[#0e0e0e] min-h-screen ${
           open ? "w-72" : "w-16"
@@ -35,7 +35,7 @@ const Sidebar = () => {
             onClick={() => setOpen(!open)}
           />
         </div>
-        <div className="mt-4 flex flex-col gap-4 relative">
+        <div className="mt-4 flex flex-col gap-4 relative ">
           {menus?.map((menu, i) => (
             <Link
               to={menu?.link}

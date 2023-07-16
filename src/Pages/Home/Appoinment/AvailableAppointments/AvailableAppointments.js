@@ -4,6 +4,7 @@ import AppointmentOption from './AppointmentOption';
 import BookingModal from '../BookingModal';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../../Shared/Navbar/Loading/Loading';
+import "./AvailableAppointments.css"
 
 const AvailableAppointments = ({ selectedDate }) => {
     
@@ -30,8 +31,9 @@ const AvailableAppointments = ({ selectedDate }) => {
     // }, [])
 
     return (
-        <section className='my-16'>
-            <h1 className='text-center  font-bold text-4xl'>Available Appointments on {format(selectedDate, 'PP')}</h1>
+        // <></>
+        <section className='mx-16'>
+            <h1 className='text-center  font-bold text-3xl text-[#4338ca]'>Available <span className='text-[#16a34a]'>Appointments on</span>  {format(selectedDate, 'PP')}</h1>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
                 {
                     appointmentOptions.map(option => <AppointmentOption

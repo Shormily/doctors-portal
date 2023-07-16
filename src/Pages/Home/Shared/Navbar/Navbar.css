@@ -1,0 +1,28 @@
+.nav-link {
+    position: relative;
+    transition: 0.4s;
+    justify-content: center;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(123, 211, 255) ;
+    transition: 0.4s;
+    justify-content: center;
+  }
+
+  .nav-link:hover {
+    color:rgb(123, 211, 255)  !important;
+  }
+  .nav-link:hover.nav-link::after {
+    width: 100%;
+  }
+
+  .megacolor{
+    background: rgb(243, 216, 250)  !important;
+  }

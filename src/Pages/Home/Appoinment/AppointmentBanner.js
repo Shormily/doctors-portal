@@ -1,5 +1,5 @@
 import React from 'react';
-import chair from '../assets/images/chair.png';
+import je from '../assets/images/je.jpg';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 
@@ -7,21 +7,23 @@ import 'react-day-picker/dist/style.css';
 const   AppointmentBanner = ({selectedDate, setSelectedDate}) => {
    
     return (
-        <header >
-            <div className="hero">
-                <div className="hero-content flex-col lg:flex-row-reverse mt-24">
-                    <img src={chair} alt="dentist chair" className="max-w-sm rounded-lg shadow-2xl" />
-                    <div className='mr-8 sm:w-full w-96 '>
+      
+       
+            <div className='hero   grid sm:grid-cols-1 lg:grid-cols-1 md:grid-cols-1'>
+                <div className="hero-content flex-col lg:gap-96 sm:gap-8  lg:flex-row-reverse   mt-24   ">
+                    <div>   <img src={je} className=" lg:max-w-sm rounded-lg shadow-2xl  " alt=""  /></div>
+                 
+                    <div className=' w-full '>
                         <DayPicker 
                             mode='single'
                             selected={selectedDate}
                             onSelect={setSelectedDate}
-                            className='w-96 '
+                            className=' '
                         />
                     </div>
                 </div>
             </div>
-        </header>
+       
     );
 };
 

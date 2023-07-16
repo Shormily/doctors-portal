@@ -1,0 +1,35 @@
+.app {
+    color: var(--black);
+   background-color: rgb(245, 245, 241);
+  
+    /* height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif; */
+  }
+
+  /* .appGlass {
+    display: grid;
+    height: 97%;
+    width: 97%;
+    background: var(--glass);
+    border-radius: 2rem;
+    gap: 50px;
+    grid-template-columns: 11rem auto 20rem;
+    overflow: hidden;
+  } */
+ 
+
+  /* @media screen and (max-width: 1200px) {
+    .appGlass{
+      grid-template-columns: 10% 50% auto;
+      overflow-y: scroll;
+    } 
+  }
+  
+  @media screen and (max-width: 768px) {
+    .appGlass{
+      grid-template-columns: 1fr;
+    } 
+  } */

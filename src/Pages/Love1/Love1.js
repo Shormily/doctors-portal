@@ -16,7 +16,13 @@ import swip7 from "../Home/assets/images/swip7.jpg";
 const Love1 = () => {
   return (
     <>
-      <div className="w-full pt-8  text-white h-100%  bg-sky-200 ">
+    <div >
+    {/* className="grid grid-cols-2  justify-center items-center bg-sky-200  m-auto w-full" */}
+{/* <div>
+<p className="text-2xl text-center text-gray-500">For a clearer tommorow</p>
+<p className="text-2xl text-center">For a clearer tommorow</p>
+</div> */}
+<div className="w-full pt-8  text-white h-100%  bg-[#e0f2fe] ">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -103,6 +109,8 @@ const Love1 = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+    </div>
+      
     </>
   );
 };
