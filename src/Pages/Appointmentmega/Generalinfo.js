@@ -3,6 +3,7 @@ import Love from '../Home/Love/Love';
 import InfoCards from '../Home/InfoCard/InfoCards';
 import Footer from '../Home/Footer/Footer';
 import Testimonial from '../Services/Testimonial';
+import "animate.css";
 
 const Generalinfo = () => {
     return (
@@ -33,7 +34,7 @@ const Generalinfo = () => {
       <Love/>
       <div className="eye-section mt-8">
         <div className=" ">
-          <p className=" text-[20px]  text-zinc-500 text-center text-white ">
+          <p className=" text-[20px]  text-zinc-500 text-center text-white animate__animated animate__fadeInLeft">
             Vision screenings vs. eye exams: Why are
           </p>
           <div
@@ -47,8 +48,8 @@ const Generalinfo = () => {
             }}
             className="max-w-[100px] m-auto"
           />
-          <p className="text-7xl text-center">Why are</p>
-          <p className="mt-5 text-5xl text-center text-cyan-500 font-bold ">
+          <p className="text-7xl text-center animate__animated animate__fadeInRight">Why are</p>
+          <p className="mt-5 text-5xl text-center text-cyan-500 font-bold animate__animated animate__fadeInUp">
             eye exams important?
           </p>
           <p className=" max-w-[2200px]  m-auto  text-[20px] text-zinc-700 text-center justify-center items-center  ">

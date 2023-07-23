@@ -1,5 +1,5 @@
 import React from "react";
-
+import "animate.css";
 import "./Banner1.css";
 
 const Banner1 = () => {
@@ -10,7 +10,7 @@ const Banner1 = () => {
           
 
           <div div className="color text-white p-3">
-      <p className="text-center pt-24  ">
+      <p className="text-center pt-24  animate__animated animate__fadeInLeft">
         Your vision is our vision
         <div
           style={{
@@ -24,8 +24,8 @@ const Banner1 = () => {
           className="max-w-[100px] m-auto"
         />
       </p>
-      <p className="text-5xl font-normal  text-center mt-2 px-2">A wide range of</p>
-      <p className="text-6xl font-semibold text-center px-2">optometry services</p>
+      <p className="text-5xl font-normal  text-center mt-2 px-2 animate__animated animate__fadeInRight">A wide range of</p>
+      <p className="text-6xl font-semibold text-center px-2  animate__animated animate__fadeInUp">optometry services</p>
   
       <div className="grid sm:grid-cols-1 lg:grid-cols-3  gap-24 justify-center items-center mt-16  max-w-[1240px] m-auto w-full">
       

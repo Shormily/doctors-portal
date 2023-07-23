@@ -2,6 +2,7 @@ import React from "react";
 import { GiCyberEye, GiBlindfold } from "react-icons/gi";
 import { AiOutlineEye } from "react-icons/ai";
 import Footer from "../Home/Footer/Footer";
+import "animate.css";
 const Diagonisis = () => {
   return (
     <>
@@ -51,7 +52,7 @@ const Diagonisis = () => {
         />
       </div>
 
-      <div className=" max-w-[1440px]  m-auto mt-8 gap-12 flex justify-center item-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mb-24">
+      <div className=" max-w-[1440px] animate__animated animate__fadeInUp  m-auto mt-8 gap-12 flex justify-center item-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mb-24">
         <div>
           <GiCyberEye className="text-sky-500" size={80} />
           <p className="text-3xl ">Eyestrain</p>

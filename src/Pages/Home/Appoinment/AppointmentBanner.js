@@ -11,9 +11,9 @@ const   AppointmentBanner = ({selectedDate, setSelectedDate}) => {
        
             <div className='hero   grid sm:grid-cols-1 lg:grid-cols-1 md:grid-cols-1'>
                 <div className="hero-content flex-col lg:gap-96 sm:gap-8  lg:flex-row-reverse   mt-24   ">
-                    <div>   <img src={je} className=" lg:max-w-sm rounded-lg shadow-2xl  " alt=""  /></div>
+                    <div>   <img src={je} className=" lg:max-w-sm rounded-lg shadow-2xl animate__animated animate__fadeInLeft " alt=""  /></div>
                  
-                    <div className=' w-full '>
+                    <div className=' w-full animate__animated animate__fadeInRight'>
                         <DayPicker 
                             mode='single'
                             selected={selectedDate}

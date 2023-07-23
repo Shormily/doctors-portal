@@ -22,6 +22,7 @@ import {
   FaRegSmileBeam,
   FaPeopleArrows,
 } from "react-icons/fa";
+import "animate.css";
 import Footer from '../Home/Footer/Footer';
 const Doctorprofil = () => {
 
@@ -103,11 +104,11 @@ const Doctorprofil = () => {
           }}
           className="max-w-[100px] m-auto"
         />
-        <p className="mt-5 text-5xl text-center text-white ">Doctors Information</p>
-        <p className=" max-w-[2200px] p-3 m-auto text-[14px] text-white text-center justify-center items-center  ">
+        <p className="mt-5 text-5xl text-center text-white  animate__animated animate__fadeInLeft ">Doctors Information</p>
+        <p className=" max-w-[2200px] p-3 m-auto text-[14px] animate__animated animate__fadeInRight text-white text-center justify-center items-center  ">
           Proactively envisioned multimedia based expertise and cross-media
           growth strategies. Seamlessly visualize quality intellectual
-          <p className="mb-8">
+          <p className="mb-8 animate__animated animate__fadeInUp">
             capital without superior collaboration and idea-sharing.
             Holistically pontificate installed base portals.
           </p>
@@ -116,8 +117,8 @@ const Doctorprofil = () => {
 
 
       <div className="hero     grid sm:grid-cols-1 lg:grid-cols-1 md:grid-cols-1">
-        <div className="  hero-content flex-col lg:gap-96 sm:gap-8   lg:flex-row-reverse   mt-8">
-          <div>
+        <div className="  hero-content flex-col lg:gap-96 sm:gap-8 animate__animated animate__fadeInRight  lg:flex-row-reverse   mt-8">
+          <div >
             <p>Great vision within reach</p>
             <div
               style={{
@@ -139,7 +140,7 @@ const Doctorprofil = () => {
             </p>
             {/* <button className="btn btn-primary">Get Started</button> */}
           </div>
-          <div><img src={um} className=" lg:max-w-sm p-2 border-1xl w-96 mt-24  shadow-2xl mb-24" alt="" /></div>
+          <div><img src={um} className=" lg:max-w-sm p-2 border-1xl w-96 mt-24  shadow-2xl mb-24  animate__animated animate__fadeInLeft " alt="" /></div>
           
         </div>
       </div>

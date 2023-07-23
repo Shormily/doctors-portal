@@ -5,15 +5,18 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, EffectCoverflow } from "swiper";
 import "./Love1.css";
-import swip1 from "../Home/assets/images/swip1.jpg";
-import swip2 from "../Home/assets/images/swip2.jpg";
-import swip3 from "../Home/assets/images/swip3.jpg";
-import swip4 from "../Home/assets/images/swip4.jpg";
-import swip5 from "../Home/assets/images/swip5.jpg";
-import swip6 from "../Home/assets/images/swip6.jpg";
-import swip7 from "../Home/assets/images/swip7.jpg";
+import swip1 from "../Home/assets/images/bn1.jpg";
+import swip2 from "../Home/assets/images/bn2.jpg";
+import swip3 from "../Home/assets/images/bn3.jpg";
+import swip4 from "../Home/assets/images/bn4.jpg";
+import swip5 from "../Home/assets/images/dc1.jpg";
+import swip6 from "../Home/assets/images/bn6.jpg";
+import swip7 from "../Home/assets/images/bn7.jpg";
+import swip8 from "../Home/assets/images/swip2.jpg";
+import swip9 from "../Home/assets/images/swip7.jpg";
 
 const Love1 = () => {
+ 
   return (
     <>
     <div >
@@ -96,14 +99,14 @@ const Love1 = () => {
           <SwiperSlide className="swiper-slides">
             <img
               className=" lg:w-full h-full mx-auto shadow-2xl border-4 font-medium  text-indigo-800"
-              src={swip4}
+              src={swip8}
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide className="swiper-slides">
             <img
               className=" lg:w-full h-full mx-auto shadow-2xl border-4 font-medium  text-indigo-800"
-              src={swip3}
+              src={swip9}
               alt=""
             />
           </SwiperSlide>

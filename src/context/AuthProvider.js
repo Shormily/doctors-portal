@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../Firebase/Firebase.config";
+import issueToken from "../lib/issueToken";
 
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -29,6 +30,7 @@ const AuthProvider = ({ children }) => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
+        issueToken(result.user.email)
       })
       .catch((error) => {
         
@@ -36,14 +38,15 @@ const AuthProvider = ({ children }) => {
       });
   };
 
-  useEffect( () =>{
+  useEffect(() =>{
   const unsubscribe = onAuthStateChanged(auth, currentUser =>{
         console.log('user observing');
         setUser(currentUser);
+        issueToken(currentUser.email);
         setLoading(false)
     })
     return () => unsubscribe();
-  })
+  }, [])
 
   const updateUser = (userInfo) =>{
     return updateProfile(auth.currentUser, userInfo);

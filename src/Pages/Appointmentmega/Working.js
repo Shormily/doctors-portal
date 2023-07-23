@@ -2,7 +2,7 @@ import React from 'react';
 import Map from '../Home/Map/Map';
 import Footer from '../Home/Footer/Footer';
 import Testimonial from '../Services/Testimonial';
-
+import "animate.css";
 const Working = () => {
     return (
         <>
@@ -34,7 +34,7 @@ const Working = () => {
   
   
       <div className="grid  sm:grid-cols-1 lg:grid-cols-2 gap-24 mt-12 justify-center items-center  max-w-[1240px] m-auto w-full">
-      <div className="   ">
+      <div className=" animate__animated animate__fadeInLeft  ">
         <div className="  lg:gap-96 sm:gap-8   lg:flex-row-reverse   mt-24">
           <div>
             <p>Important reminder</p>
@@ -84,7 +84,7 @@ const Working = () => {
         </div>
       </div>
         
-        <div className="text-1xl bg-colors text-white p-24 ">
+        <div className="text-1xl bg-colors text-white p-24 animate__animated animate__fadeInRight">
            <p className='text-4xl text-center '>Working hours</p>
            <div
               style={{

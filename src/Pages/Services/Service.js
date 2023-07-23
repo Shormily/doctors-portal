@@ -2,12 +2,12 @@ import React from 'react';
 import Love from '../Home/Love/Love';
 import Footer from '../Home/Footer/Footer';
 import Map from '../Home/Map/Map';
-
+import "animate.css";
 const Service = () => {
     return (
         <>
              <div div className="color text-white p-3">
-      <p className="text-center pt-32   ">
+      <p className="text-center pt-32 animate__animated animate__fadeInLeft   ">
         Your service is our vision
         <div
           style={{
@@ -24,7 +24,7 @@ const Service = () => {
       <p className="text-5xl font-normal  text-center mt-2 px-2">A wide range of</p>
       <p className="text-6xl font-semibold text-center px-2">optometry services</p>
   
-      <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-24 justify-center items-center mt-16  max-w-[1240px] m-auto w-full">
+      <div className="grid sm:grid-cols-1 animate__animated animate__fadeInUp lg:grid-cols-3 gap-24 justify-center items-center mt-16  max-w-[1240px] m-auto w-full">
       
         <p >
         <i className="fa-solid fa-eye icns hover:bg-[#a3a3a3] "></i>
@@ -57,7 +57,7 @@ const Service = () => {
         </p>
        
       </div>
-      <div className="grid mb-24  sm:grid-cols-1 lg:grid-cols-3 gap-24 mt-12 justify-center items-center  max-w-[1240px] m-auto w-full">
+      <div className="grid mb-24  sm:grid-cols-1 lg:grid-cols-3 animate__animated animate__fadeInUp gap-24 mt-12 justify-center items-center  max-w-[1240px] m-auto w-full">
         <p>
         <i className="fa-brands fa-skyatlas icns bg-[#a3a3a3]"></i>
       

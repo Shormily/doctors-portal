@@ -3,6 +3,7 @@ import { GiCyberEye, GiBlindfold } from "react-icons/gi";
 // import { BsBrowserSafari } from "react-icons/bi";
 import { BsBrowserSafari,BsFillDatabaseFill,BsFillLayersFill,BsFillSignpost2Fill,BsEmojiLaughing,BsGiftFill } from "react-icons/bs";
 import Footer from '../Home/Footer/Footer';
+import "animate.css";
 const FAQ = () => {
     return (
         <>
@@ -31,7 +32,7 @@ const FAQ = () => {
           </p>
         </p>
       </div>  
-      <div className=" max-w-[1440px]  m-auto mt-24 gap-12 flex justify-center item-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
+      <div className=" max-w-[1440px] animate__animated animate__fadeInUp  m-auto mt-24 gap-12 flex justify-center item-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
         <div>
           <BsFillDatabaseFill className="text-blue-900" size={80} />
           <p className="text-3xl mt-5 ">Lasik</p>

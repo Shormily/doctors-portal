@@ -1,10 +1,9 @@
 import React from "react";
-import "./Charts.css";
+// import "./Charts.css";
 // import { cardsData } from "../Dashoard/Data";
 
 import { cardsData } from "../Dashboard/Data";
 import Chart from "react-apexcharts";
-import Chartdata from "../Chatsdata/Chartdata";
 
 const Cards = () => {
   const data = {
@@ -60,70 +59,70 @@ const Cards = () => {
     },
   };
   return (
-    <><h1 className="mt-8 text-3xl font-semibold">Dashboard</h1>
-    <div className="Cards">
+  //   <><h1 className="mt-8 text-3xl font-semibold">Dashboard</h1>
+  //   <div className="Cards">
      
-    {cardsData.map((card, id) => {
-      return (
-        <div className="parentContainer mt-24" key={id}>
-          <Chartdata
-            title={card.title}
-            color={card.color}
-            barValue={card.barValue}
-            value={card.value}
-            png={card.png}
-            series={card.series}
-          />
-        </div>
-      );
-    })}
+  //   {cardsData.map((card, id) => {
+  //     return (
+  //       <div className="parentContainer mt-24" key={id}>
+  //         <Chartdata
+  //           title={card.title}
+  //           color={card.color}
+  //           barValue={card.barValue}
+  //           value={card.value}
+  //           png={card.png}
+  //           series={card.series}
+  //         />
+  //       </div>
+  //     );
+  //   })}
     
-  </div></>
+  // </div></>
     
-    // <>
-    //   {/* <h1>hun</h1> */}
-    //   <div className="Cards">
-    //     {/* <div className="container">
-    //       <div className="row">
-    //         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+    <>
+      <h1 className="mt-8 text-3xl font-semibold">Dashboard</h1>
+      <div className="Cards">
+        <div className="container">
+          <div className="row">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
             
-    //           <Chart options={data.options} series={data.series} type="area" />
-    //           <div className="">
-    //           {" "}
-    //           <Chart options={data.options} series={data.series} type="area" />
-    //         </div>
-    //         <div className="">
-    //           {" "}
-    //           <Chart options={data.options} series={data.series} type="area" />
-    //         </div>
-    //         </div>
+              <Chart options={data.options} series={data.series} type="area" />
+              <div className="">
+              {" "}
+              <Chart options={data.options} series={data.series} type="area" />
+            </div>
+            <div className="">
+              {" "}
+              <Chart options={data.options} series={data.series} type="area" />
+            </div>
+            </div>
            
-    //       </div>
-    //     </div> */}
-    //     {
-    //       cardsData.map((card, id) =>{
+          </div>
+        </div>
+        {
+          cardsData.map((card, id) =>{
 
-    //         return(
-    //           <div className="parentContainer " key={id}>
-    //             <p
-    //              title={card.title}
-    //              color={card.color}
-    //              barValue={card.barValue}
-    //              value={card.value}
-    //              png={card.png}
-    //              series={card.series}
-    //             />
-    //           </div>
-    //         )
-    //       })
-    //     }
-
-
-
-    //   </div>
+            return(
+              <div className="parentContainer " key={id}>
+                <p
+                 title={card.title}
+                 color={card.color}
+                 barValue={card.barValue}
+                 value={card.value}
+                 png={card.png}
+                 series={card.series}
+                />
+              </div>
+            )
+          })
+        }
 
 
-    // </>
+
+      </div>
+
+
+    </>
 
    
   );

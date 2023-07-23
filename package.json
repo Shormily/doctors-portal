@@ -15,7 +15,6 @@
     "daisyui": "^2.51.6",
     "date-fns": "^2.29.3",
     "firebase": "^9.19.1",
-    "framer-motion": "^4.1.17",
     "react-apexcharts": "^1.4.1",
     "react-circular-progressbar": "^2.1.0",
     "react-countup": "^6.4.2",

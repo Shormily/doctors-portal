@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
 import useToken from "../hook/useToken";
+import issueToken from "../../../lib/issueToken";
 
 const Login = () => {
   const {
@@ -15,17 +16,15 @@ const Login = () => {
   const { signIn, signInUsingGoogle } = useContext(AuthContext);
   const [loginError, setLoginError] = useState("");
   const [loginUserEmail, setLoginUserEmail] = useState('');
-  const [token] = useToken(loginUserEmail)
+  //const [token] = useToken(loginUserEmail)
+  //console.log(token)
   const location = useLocation();
   const navigate = useNavigate();
    
-  if(token){
-    navigate(from, { replace: true });
-    toast.success("successfully Log in");
-  }
+ 
 
   const from = location.state?.from?.pathname || "/";
-  const handleLogin = (data) => {
+  const handleLogin = async (data) => {
     console.log(data);
     setLoginError("");
     signIn(data.email, data.password)
@@ -33,7 +32,12 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setLoginUserEmail(data.email);
-      
+        const token = issueToken(data.email);
+        console.log(token);
+        if(token){
+          navigate(from, { replace: true });
+          toast.success("successfully Log in");
+        }
       })
       .catch((error) => {
         console.log(error.message);
@@ -46,9 +50,9 @@ const Login = () => {
       // toast.success("successfully Log in");
     }
   }, [user]);
-  const hanldeGoogleLogin = () => {
-    signInUsingGoogle();
-  };
+  // const hanldeGoogleLogin = () => {
+  //   signInUsingGoogle();
+  // };
 
   return (
     <>
@@ -111,13 +115,7 @@ const Login = () => {
               </Link>
             </p>
 
-            <div className="divider">OR</div>
-            <button
-              onClick={hanldeGoogleLogin}
-              className="btn btn-dark w-full text-white"
-            >
-              Continue as google login
-            </button>
+          
           </form>
         </div>
       </div>

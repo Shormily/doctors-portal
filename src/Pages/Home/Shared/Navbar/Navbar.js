@@ -32,7 +32,7 @@ const Navbar = () => {
       <div className="w-full   min-h-[60px] mb-24 flex justify-center shadow-lg italic  items-center  absolute z-20 text-slate-950 font-semibold bg-white ">
         <img className=" p-3" src={logos} alt="" />
         <React.Fragment>
-        <ul className="hidden sm:flex px-4 p-4 mt-1 ">
+        <ul className="hidden sm:flex px-4 p-4 mt-4 mb-4 ">
           <li className="mx-4 nav-link  active:text-sky-500">
             <NavLink as={NavLink} to="/">
               Home

@@ -13,7 +13,7 @@ const About = () => {
     <>
       <div className="hero  bg-[#e0f2fe]   grid sm:grid-cols-1 lg:grid-cols-1 md:grid-cols-1">
         <div className="  hero-content flex-col lg:gap-96 sm:gap-8   lg:flex-row-reverse   mt-24">
-          <div>
+          <div className="animate__animated animate__fadeInRight">
             <p>Great vision within reach</p>
             <div
               style={{
@@ -35,11 +35,11 @@ const About = () => {
             </p>
             {/* <button className="btn btn-primary">Get Started</button> */}
           </div>
-          <div><img src={um} className=" lg:max-w-sm rounded-lg shadow-2xl" alt="" /></div>
+          <div><img src={um} className=" lg:max-w-sm rounded-lg shadow-2xl animate__animated animate__fadeInLeft" alt="" /></div>
           
         </div>
       </div>
-      <p className="text-center pt-24  ">
+      <p className="text-center pt-24 animate__animated animate__fadeInLeft  ">
       Your vision is our focus
         <div
           style={{
@@ -53,10 +53,10 @@ const About = () => {
           className="max-w-[100px] m-auto"
         />
       </p>
-      <p className="text-5xl    font-bold text-center mt-2 text-[#0284c7]">
+      <p className="text-5xl animate__animated animate__fadeInRight    font-bold text-center mt-2 text-[#0284c7]">
       Better eyes
       </p>
-      <p className="text-6xl font-normal text-center">for a better life</p>
+      <p className="text-6xl font-normal text-center animate__animated animate__fadeInUp">for a better life</p>
       <div className="grid  gap-6 mt-24 lg:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 text-white  max-w-[1240px] m-auto" >
             <div>
             <FaFulcrum color="cornflowerblue" size={60} />

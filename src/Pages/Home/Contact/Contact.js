@@ -2,13 +2,14 @@ import React from "react";
 import "./Contact.css";
 import { Input } from "antd";
 import Footer from "../Footer/Footer";
+import "animate.css";
 
 const Contact = () => {
   const { TextArea } = Input;
   return (
     <div className="">
       <div className="bg-colors p-5">
-        <h1 className="pt-32 text-5xl text-center text-white">Contact us</h1>
+        <h1 className="pt-32 text-5xl text-center text-white animate__animated animate__fadeInLeft">Contact us</h1>
         <div
           style={{
             justifyContent: "center",
@@ -20,10 +21,10 @@ const Contact = () => {
           }}
           className="max-w-[100px] m-auto"
         />
-        <p className=" max-w-[2200px] p-3 m-auto text-[14px] text-white text-center justify-center items-center  ">
+        <p className=" max-w-[2200px] p-3 m-auto text-[14px] text-white text-center justify-center items-center animate__animated animate__fadeInRight ">
           Globally incubate standards compliant channels before scalable
           benefits. Quickly disseminate superior deliverables whereas web-
-          <p className="mb-8">
+          <p className="mb-8 animate__animated animate__fadeInUp">
             enabled applications. Quickly drive clicks-and-mortar catalysts for
             change before vertical architectures.
           </p>
@@ -43,7 +44,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="mt-5 grid gap-7 lg:ml-64 p-4 mt-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+      <div className="mt-5 grid gap-7 animate__animated animate__fadeInLeft lg:ml-64 p-4 mt-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
       {/* <div className="grid gap-7  mt-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-64 p-4 flex justify-center items-center"> */}
         <div>
           <p className="text-[12px]">Your Name (required)</p>
@@ -63,7 +64,7 @@ const Contact = () => {
         Submit form
       </button>
         </div>
-        <div>
+        <div className="animate__animated animate__flipInY">
         <iframe
               title="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.544153666492!2d-74.01101428500574!3d40.70603607933263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a165bedccab%3A0x2cb2ddf003b5ae01!2sWall%20St%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1649877573625!5m2!1sen!2sbd"

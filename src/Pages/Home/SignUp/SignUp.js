@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 import { toast } from "react-hot-toast";
-import useToken from "../hook/useToken";
+import issueToken from "../hook/useToken";
 const SignUp = () => {
   const {
     register,
@@ -11,43 +11,41 @@ const SignUp = () => {
     handleSubmit,
   } = useForm();
   const { createUser, updateUser, signInUsingGoogle } = useContext(AuthContext);
-  const [signUpError, setSignUpError] = useState('')
-  const { user,  } = useContext(AuthContext);
+  const [signUpError, setSignUpError] = useState("");
+  const { user } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
-  const [createUserEmail, setCreateUserEmail] = useState('')
-  const [token] = useToken(createUserEmail);
-  const from = location.state?.from?.pathname || '/';
-  
+  const [createUserEmail, setCreateUserEmail] = useState("");
+  const [token] = issueToken(createUserEmail);
+  const from = location.state?.from?.pathname || "/";
+
   if(token){
     navigate('/')
   }
   const handleSignUp = (data) => {
-    setSignUpError('')
+    setSignUpError("");
     createUser(data.email, data.password)
       .then((result) => {
         const user = result.user;
         console.log(user);
-        
-        toast.success('User Created Successfully');
-        navigate(from, {replace:true});
-       
-  
+        localStorage.setItem("accessToken", user?.accessToken)
+        window.location.reload();
+        toast.success("User Created Successfully");
+        navigate(from, { replace: true });
+
         const userInfo = {
-          displayName: data.name
-        }
+          displayName: data.name,
+        };
         updateUser(userInfo)
-        .then(() =>{
-        
-         saveUser(data.name, data.email);
-        })
-        .catch(err => console.log(err))
+          .then(() => {
+            saveUser(data.name, data.email);
+          })
+          .catch((err) => console.log(err));
       })
-      .catch((error) => 
-     { console.log(error)
-      setSignUpError(error.message)}
-      )
-      
+      .catch((error) => {
+        console.log(error);
+        setSignUpError(error.message);
+      });
   };
   useEffect(() => {
     if (user) {
@@ -55,32 +53,27 @@ const SignUp = () => {
       // toast.success("successfully Sign out");
     }
   }, [user]);
-  
 
   const hanldeGoogleLogin = () => {
- 
     signInUsingGoogle();
-   
-    
   };
 
-  const saveUser = (name, email) =>{
-    const user ={name, email};
-    fetch('http://localhost:5000/users',{
-      method:'POST',
-      headers:{
-        'content-type':'application/json'
+  const saveUser = (name, email) => {
+    const user = { name, email };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
       },
-      body:JSON.stringify(user)
+      body: JSON.stringify(user),
     })
-    .then(res=>res.json())
-    .then(data=>{
-      // console.log('save user',data);
-      setCreateUserEmail(email);
-      // navigate('/');
-    })
-  }
-
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log('save user',data);
+        setCreateUserEmail(email);
+        // navigate('/');
+      });
+  };
 
   return (
     <>
@@ -137,7 +130,7 @@ const SignUp = () => {
                 <span className="label-text">Forgot password ?</span>
               </label>
             </div>
-           
+
             <input
               className="btn btn-accent w-full text-white"
               value="SignUp"
@@ -151,10 +144,7 @@ const SignUp = () => {
               </Link>
             </p>
 
-            <div className="divider">OR</div>
-            <button onClick={hanldeGoogleLogin} className="btn btn-dark w-full text-white">
-              Continue as google login
-            </button>
+     
           </form>
         </div>
       </div>

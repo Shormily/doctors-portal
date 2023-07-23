@@ -4,6 +4,7 @@ import { GiCyberEye, GiBlindfold } from "react-icons/gi";
 import { BsBrowserSafari } from "react-icons/bs";
 import Footer from "../Home/Footer/Footer";
 import Love from "../Home/Love/Love";
+import "animate.css";
 import Banner from "../Home/Banner/Banner";
 const Layereye = () => {
   return (
@@ -21,10 +22,10 @@ const Layereye = () => {
           }}
           className="max-w-[100px] m-auto"
         />
-        <p className="mt-5 text-5xl text-center text-white ">
+        <p className="mt-5 text-5xl text-center text-white  animate__animated animate__fadeInLeft">
         Laser eye correction
         </p>
-        <p className=" max-w-[2200px] p-3 m-auto text-[14px] text-white text-center justify-center items-center  ">
+        <p className=" max-w-[2200px] animate__animated animate__fadeInUp p-3 m-auto text-[14px] text-white text-center justify-center items-center  ">
           Proactively envisioned multimedia based expertise and cross-media
           growth strategies. Seamlessly visualize quality intellectual
           <p className="mb-8">
@@ -51,7 +52,7 @@ const Layereye = () => {
         />
       </div>
 
-      <div className=" max-w-[1440px]  m-auto mt-8 gap-12 flex justify-center item-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
+      <div className=" max-w-[1440px] animate__animated animate__fadeInUp  m-auto mt-8 gap-12 flex justify-center item-center grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ">
         <div>
           <GiCyberEye className="text-blue-900" size={80} />
           <p className="text-3xl mt-5 ">Lasik</p>

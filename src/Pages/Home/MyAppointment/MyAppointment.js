@@ -8,6 +8,7 @@ import "./MyAppointment.css"
 
 const MyAppointment = () => {
   const { user } = useContext(AuthContext);
+  console.log(user.email);
 
   const url = `http://localhost:5000/bookings?email=${user?.email}`;
    const {data: bookings = []} = useQuery({
